@@ -7,7 +7,7 @@ import android.view.Display;
 
 public class SnakeActivity extends Activity {
 
-    // Declare an instance of SnakeEngine
+    // Initializare SnakeEngine
     SnakeEngine snakeEngine;
 
     @Override
@@ -15,12 +15,12 @@ public class SnakeActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         // Get the pixel dimensions of the screen
+        // Rezolutia ecranului
         Display display = getWindowManager().getDefaultDisplay();
-
-        // Initialize the result into a Point object
         Point size = new Point();
         display.getSize(size);
 
+        // Preia setarile jocului din meniu
         String direction = getIntent().getStringExtra("gameDirection");
         String difficulty = getIntent().getStringExtra("gameDifficulty");
 
